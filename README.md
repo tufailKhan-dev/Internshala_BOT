@@ -22,4 +22,9 @@ Apply to internships directly from the bot.
 ## RUN
 
 . python auto.py
+
+ ## Example
  
+
+https://github.com/user-attachments/assets/15840d6f-cab2-4a7c-841a-12bb4ba4ef68
+

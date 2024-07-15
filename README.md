@@ -16,6 +16,10 @@ internshalaBOT is a bot designed to simplify the process of finding internships 
 Apply to internships directly from the bot.
 
 ## SETUP
-
+. Install selenium
 . Edit data.py 
+
+## RUN
+
+. python auto.py
  

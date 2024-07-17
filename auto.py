@@ -76,15 +76,13 @@ class Autofill(StartBrowser):
         try:        
             self.driver.execute_script('window.scrollBy(0, 1000)')
             Assessment = self.driver.find_element(By.CLASS_NAME,"additional_question")
+            Assessment_Questions = self.driver.find_elements(By.CLASS_NAME,"additional_question")
             if Assessment.is_displayed():
-                time.sleep(5)
-                textareas = Assessment.find_elements(By.CSS_SELECTOR,"textarea")
-                print("here is textarea:-",textareas)
-                for i in textareas:
-                    attr = i.get_attribute("id")
+                for i in Assessment_Questions:
+                    time.sleep(5)
+                    textarea = i.find_element(By.CSS_SELECTOR,"textarea")
+                    attr = textarea.get_attribute("id")
                     WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, f"textarea[id='{attr}']"))).send_keys("This form is submitted by Bot," + "\n" + "sorry!!!:(" + "\n" + "u can check it on Github https://www.github.com/tufailKhan-dev")
-                    print("finded")
-                # textarea.click(
                 self.EndForm()
             else:
                 self.EndForm()
